@@ -1,0 +1,35 @@
+<html>
+	<head>
+	<title> Lab 4 Grade Calculator </title>
+	</head>
+	<body>
+		<h2> Grade Calculation</h2>
+			<p>
+			Enter your name: <input type="text" id="nameBox" size=12 value=""><br><br>
+			Homework average: <input type="text" id="homeworkBox" value=""><br><br>
+			Lab average: <input type="text" id="labsBox" value=""><br><br>
+			Midterm score: <input type="text" id="midtermBox" value=""><br><br>
+			Final Exam score: <input type="text" id="examBox" value=""><br><br>
+			</p>
+			<br>
+			<!-- Start input button -->
+			<input type="button" value="Calculate Course Grade"
+			onclick="homework=parseFloat(document.getElementById('homeworkBox').value);
+			labs=parseFloat(document.getElementById('labsBox').value);
+			
+			midterm=parseFloat(document.getElementById('midtermBox').value);
+			
+			finalExam=parseFloat(document.getElementById('examBox').value);
+			
+			overall_Average = homework*0.25 + labs*0.20 + midterm*0.25 + finalExam*0.30;
+			
+			document.getElementById('outputDiv').innerHTML=
+			
+			'Hello '+ document.getElementById('nameBox').value+ ', your overall course average grade is: ' + overall_Average;">
+			
+			<!-- close input button -->
+			<hr>
+			<br><br>
+			<div id="outputDiv"></div>
+	</body>
+</html>
